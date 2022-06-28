@@ -12,6 +12,8 @@ pub struct Tweet {
     pub origin_tweet: Pubkey,
     pub people_who_liked: Vec<Pubkey>,
     pub like_action: Vec<String>,
+    pub photo_url: String,
+    pub caption: String,
 }
 
 #[account]

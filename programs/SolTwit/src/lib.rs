@@ -25,6 +25,15 @@ pub mod sol_twit {
         handle_write_tweet(ctx, message, user_pubkey)
     }
 
+    pub fn write_photo_tweet(
+        ctx: Context<WriteTweet>,
+        message: String,
+        user_pubkey: Pubkey,
+        photo: Photo,
+    ) -> Result<()> {
+        handle_write_photo_tweet(ctx, message, user_pubkey, photo)
+    }
+
     pub fn like_tweet(
         ctx: Context<LikeTweet>,
         user_like_tweet: Pubkey,
